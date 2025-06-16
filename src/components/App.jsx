@@ -1,11 +1,15 @@
 import "../scss/App.scss";
 import { useState } from "react";
 import Header from "./Header";
+import Game from "./Game"
 import Input from "./Input";
+import { data } from "./services/data";
+import { sample } from "./services/sample"
 
 function App() {
   const [wordInput, setWordInput] = useState("");
   const [guesses, setGuesses] = useState([]);
+  const [answer] = useState(sample(data));
 
   // funct. input change
   const handleInput = (ev) => {
@@ -28,6 +32,7 @@ function App() {
   return (
     <>
       <Header />
+      <Game guesses={guesses} answer={answer} />
       <Input
         wordInput={wordInput}
         handleInput={handleInput}
