@@ -4,6 +4,18 @@ This is a clone of the popular game **Wordle**, built with React.js. The player 
 
 ![Screenshot of wordle app](/src/images/wordle-image.png)
 
+## 📋 Features
+
+After each guess, the letters change color to give you clues:
+
+- ⚪ Gray: The letter is not in the word.
+
+- 🟠 Orange: The letter is in the word but in the wrong position.
+
+- 🟢 Green: The letter is in the word and in the correct position.
+
+The goal is to guess the word before running out of attempts.
+
 ## 🛠️ Tech Stack
 
 - HTML
