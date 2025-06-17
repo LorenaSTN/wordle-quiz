@@ -13,23 +13,21 @@ function App() {
   const [guesses, setGuesses] = useState([]);
   const [answer, setAnswer] = useState(sample(data));
   const [banner, setBanner] = useState("playing");
-  const [showModal, setShowModal] = useState(false)
+  const [showModal, setShowModal] = useState(false);
 
-
-// show the instructions only the first time the user visits the page
+  // show the instructions only the first time the user visits the page
   useEffect(() => {
     const seenInstructions = localStorage.getItem("seenInstructions");
-    if(!seenInstructions){
-      setShowModal(true)
-       localStorage.setItem("hasSeenInstructions", "true")
+    if (!seenInstructions) {
+      setShowModal(true);
+      localStorage.setItem("hasSeenInstructions", "true");
     }
-  }, [])
-
+  }, []);
 
   //func. close modal instructions
   const handleClose = () => {
-    setShowModal(false)
-  }
+    setShowModal(false);
+  };
 
   // funct. input change
   const handleInput = (ev) => {
@@ -66,11 +64,9 @@ function App() {
     setBanner("playing");
   };
 
-
-
   return (
     <div className="wrapper">
-     {showModal && <Instructions handleClose={handleClose} />} 
+      {showModal && <Instructions handleClose={handleClose} />}
       <Header />
       <div className="wrapper-game">
         <Game guesses={guesses} answer={answer} />
