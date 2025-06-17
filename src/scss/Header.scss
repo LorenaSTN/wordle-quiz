@@ -1,8 +1,26 @@
-.header-title {
-  font-weight: 650;
-  font-size: 60px;
-  text-align: center;
-   margin: 0;
-   padding-bottom: 45px;
-  color: rgb(25, 25, 25);
+.header {
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  padding-top: 24px;
+
+  &-title {
+    font-weight: 650;
+    font-size: 55px;
+    text-align: center;
+    margin: 0;
+    width: 75px;
+    height: 40px;
+    place-content: center;
+    aspect-ratio: 1 / 1;
+    padding: 10px 0px;
+    padding-bottom: 30px;
+    color: rgb(25, 25, 25);
+    border: 2px solid rgb(184, 184, 184);
+    border-radius: 10px;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 6px -1px,
+      rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;
+  }
 }

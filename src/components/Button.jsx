@@ -1,15 +1,17 @@
 import PropTypes from "prop-types";
-import "../scss/Button.scss"
+import "../scss/Button.scss";
 
-function Button({handleRestart}) {
+function Button({ handleRestart }) {
   return (
-      <button className="button" onClick={handleRestart}> Restart game</button>
-    );
+    <button className="button" onClick={handleRestart}>
+      {" "}
+      Restart game
+    </button>
+  );
 }
 
-export default Button
-
+export default Button;
 
 Button.propTypes = {
-    handleRestart: PropTypes.func.isRequired
-}
+  handleRestart: PropTypes.func.isRequired,
+};
